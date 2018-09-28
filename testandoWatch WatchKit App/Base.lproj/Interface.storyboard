@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Noz-uo-Lci">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="testandoWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="teste" id="oBA-Cy-okW"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="-7"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="nHk-kX-4aB">
+            <objects>
+                <controller id="rC9-yH-kMG">
+                    <items>
+                        <label width="1" alignment="left" text="Metas" textAlignment="center" id="S8Y-vm-po5">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <button width="1" alignment="left" title="Distancia 450m" id="ina-sh-ReP">
+                            <color key="backgroundColor" name="blue"/>
+                        </button>
+                        <button width="1" alignment="left" title="Velocidade 2km/h" id="KLX-rK-N9o">
+                            <color key="backgroundColor" name="green"/>
+                        </button>
+                        <button width="1" alignment="left" title="Tempo 10m" id="YeK-JS-Exl">
+                            <color key="backgroundColor" name="red"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="602" y="329"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="YTT-8Z-C63">
+            <objects>
+                <controller id="rGG-YD-R7u">
+                    <items>
+                        <label width="1" alignment="left" text="Records" textAlignment="center" id="0VM-3l-eIR">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <label width="1" alignment="left" text="Distancia" textAlignment="center" id="qbv-Qv-Fab">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label width="1" alignment="left" text="450m" textAlignment="center" id="S7c-bD-WdS">
+                            <color key="textColor" name="blue"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                        <label width="1" alignment="left" text="Velocidade" textAlignment="center" id="qcP-Ye-vXR">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label width="1" alignment="left" text="2Km/h" textAlignment="center" id="rGs-Ui-orX">
+                            <color key="textColor" name="green"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                        <label width="1" alignment="left" text="Tempo" textAlignment="center" id="Zk5-bX-qZZ">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label width="1" alignment="left" text="10m" textAlignment="center" id="85p-l4-jvi">
+                            <color key="textColor" name="red"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="871" y="328"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="yaT-B0-lBS">
+            <objects>
+                <controller id="DaG-cy-aaD">
+                    <items>
+                        <label width="1" alignment="left" text="caminhe 10 minutos" textAlignment="center" id="pnT-OG-6fk">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <label alignment="left" text="Label" id="eS5-kF-Waz"/>
+                        <label alignment="left" text="Label" id="h2s-kF-tvx"/>
+                        <label alignment="left" text="Label" id="yek-Rc-2wU"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="781" y="607"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="uZB-Pn-p92">
+            <objects>
+                <controller id="AMi-MA-fct">
+                    <items>
+                        <label width="1" alignment="left" text="O que achou dessa meta?" textAlignment="center" numberOfLines="0" id="TRu-kG-vSW">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <button width="1" alignment="left" title="Fácil" id="O64-Jh-Lyi">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button width="1" alignment="left" title="Normal" id="jMZ-im-mfV">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                        <button width="1" alignment="left" title="Dificil" id="r0y-LT-7qJ">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.98958333330000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1143" y="328"/>
+        </scene>
+        <!--Tracking Controller-->
+        <scene sceneID="gZu-ih-ubY">
+            <objects>
+                <controller id="wwS-nY-QPz" customClass="TrackingController" customModule="testandoWatch_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="100" alignment="left" contentMode="scaleAspectFit" id="1tn-pc-0KS"/>
+                        <button width="1" alignment="left" title="Button" id="hdt-b6-4To">
+                            <connections>
+                                <action selector="btStepAction" destination="wwS-nY-QPz" id="ATS-UJ-qde"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="ring" destination="1tn-pc-0KS" id="n96-vq-7PF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1423" y="326"/>
+        </scene>
+        <!--Velocity Track Controller-->
+        <scene sceneID="dbR-eE-yuC">
+            <objects>
+                <controller id="Noz-uo-Lci" customClass="VelocityTrackController" customModule="testandoWatch_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="X9P-wA-KxB"/>
+                    </items>
+                    <connections>
+                        <outlet property="ring" destination="X9P-wA-KxB" id="X5T-jh-0a1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1143" y="606"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="testandoWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="blue">
+            <color red="0.27099999785423279" green="0.71399998664855957" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.22699999809265137" green="0.65100002288818359" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red">
+            <color red="0.68999999761581421" green="0.24300000071525574" blue="0.29399999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

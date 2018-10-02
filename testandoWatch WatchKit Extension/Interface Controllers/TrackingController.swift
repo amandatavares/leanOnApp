@@ -16,14 +16,14 @@ class TrackingController: WKInterfaceController {
     var healthManager: HealthManager = HealthManager.init()
     let goal: Double = 200
     
-    let time: Timer =  Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(progressLoop), userInfo: nil, repeats: true)
+    var time: Timer!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        progressWrapper = ProgressCircleWrapper.init(interfaceImage: ring, imageSet: "blue_progress", current: 5, max: 100, stepInterval: 0.1)
+        progressWrapper = ProgressCircleWrapper.init(interfaceImage: ring, imageSet: "blue_progress", current: 0, max: 200, stepInterval: 0.1)
         
-        progressWrapper?.stopsOnMaxValue = false
+        progressWrapper?.stopsOnMaxValue = true
         
         progressWrapper?.delegate = self
         
@@ -31,6 +31,7 @@ class TrackingController: WKInterfaceController {
         
         progressLoop()
         
+        time = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(progressLoop), userInfo: nil, repeats: true)
         
                 
     }
@@ -44,7 +45,7 @@ class TrackingController: WKInterfaceController {
             self.healthManager.getTodayDistance { (result) in
                 DispatchQueue.main.async {
                     print("titi\(result)")
-                    self.progressWrapper?.change(to: Int(result/2))
+                    self.progressWrapper?.change(to: Int(result))
                 }
             }
         }

@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var speedTracker: SpeedTracker = SpeedTracker()
     var healthManager: HealthManager = HealthManager()
     
+    @IBOutlet weak var velocityLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,19 @@ class ViewController: UIViewController {
         self.healthManager.auth()
         self.startTrackingOrShowLocationAlert(tracker: self.speedTracker)
         disableIdleTimerIfWanted()
+        
+        speedTracker.startTracking()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: SpeedTracker.Notifications.CurrentSpeedNotification.rawValue), object: speedTracker, queue: OperationQueue.main) { [weak self] (notification: Notification) -> Void in
+            
+            if let currentSpeedNumber = notification.userInfo?[SpeedTracker.Notifications.CurrentSpeed] as? NSNumber,
+                let maxSpeedNumber = notification.userInfo?[SpeedTracker.Notifications.MaxSpeed] as? NSNumber {
+                
+                
+                
+                
+            }
+        }
     }
     
     @IBAction func testeCon(_ sender: Any) {

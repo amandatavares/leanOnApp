@@ -148,6 +148,26 @@
             </objects>
             <point key="canvasLocation" x="1416" y="680"/>
         </scene>
+        <!--Interface Controller-->
+        <scene sceneID="oDY-QQ-7qe">
+            <objects>
+                <controller id="dqL-Gv-6Z8">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="overlap" id="XvK-Kf-J7c">
+                            <items>
+                                <imageView height="1" alignment="left" image="blue_progress0" contentMode="scaleAspectFit" id="CJq-Cc-IbK"/>
+                                <group width="1" height="1" alignment="left" layout="vertical" id="AUb-Dv-8Rd">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Label" id="4mE-85-k5u"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1143" y="1058"/>
+        </scene>
         <!--Velocity Track Controller-->
         <scene sceneID="dbR-eE-yuC">
             <objects>
@@ -172,7 +192,7 @@
     </scenes>
     <resources>
         <namedColor name="blue">
-            <color red="0.27099999785423279" green="0.71399998664855957" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.27058823529411763" green="0.71372549019607845" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="green">
             <color red="0.22699999809265137" green="0.65100002288818359" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

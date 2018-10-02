@@ -18,6 +18,7 @@ class HealthManager {
         
     }
     
+    /// Request user auth to HealthKit
     func auth() {
         let healthKitTypes: Set = [
             // access step count
@@ -35,6 +36,9 @@ class HealthManager {
         }
     }
     
+    /// Gets the steps during the day. It configures the Health kit quantity type stepCount
+    ///
+    /// - Parameter completion: sends the resultCount to main and execute query
     func getTodaysSteps(completion: @escaping (Double) -> Void) {
         
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
@@ -63,6 +67,10 @@ class HealthManager {
     }
     
     
+    /// Gets the walking or runnig distance during the day.
+    /// It configures the Health kit quantity type distanceWalkingRunning
+    ///
+    /// - Parameter completion: sends the resultCount to main and execute query
     func getTodayDistance(completion: @escaping (Double) -> Void){
         let distanceQuantity = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
         

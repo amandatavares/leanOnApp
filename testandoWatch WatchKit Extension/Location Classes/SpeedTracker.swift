@@ -41,6 +41,7 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
     }
     
+    /// Request user authorization to get Location and start updating it.
     func startTracking() {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
@@ -49,6 +50,7 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    /// Stop updating location.
     func stopTracking() {
         locationManager.stopUpdatingLocation()
     }
@@ -62,6 +64,10 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    /** Updates the speed through the Notification Center. It defines the currentSpeed and maxSpeed
+ 
+     - Parameter speedInMetersPerSecond: the speed in meters per second. Must to be double.
+     */
     private func updateSpeed(speedInMetersPerSecond: Double) {
         DispatchQueue.main.async() { [weak self] in
             guard let `self` = self else { return }
@@ -81,7 +87,10 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    
+    /** Updates the distance through the Notification Center. It defines the currentDistance.
+     
+     - Parameter distanceInMeters: the distance in meters. Must to be double.
+     */
     private func updateDistance(distanceInMeters: Double) {
         DispatchQueue.main.async() { [weak self] in
             guard let `self` = self else { return }
@@ -92,13 +101,17 @@ class SpeedTracker: NSObject, CLLocationManagerDelegate {
             
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: Notifications.CurrentDistanceNotification.rawValue), object: self, userInfo: userInfo)
-            
         }
     }
     
     
     // MARK: CLLocationManagerDelegate
     
+    /// Teels the delegate that new location data is available
+    ///
+    /// - Parameters:
+    ///   - manager: location manager
+    ///   - locations: receives a list of Locations, where we can get the last
     @objc func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let lastLocation = locations.last else { return }
         

@@ -7,23 +7,56 @@
 //
 
 import UIKit
+import CoreLocation
+import WatchKit
+import WatchConnectivity
 
 class ViewController: UIViewController {
 
+    var speedTracker: SpeedTracker = SpeedTracker()
+    var healthManager: HealthManager = HealthManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let notificationManager = NotificationManager()
         
         notificationManager.register()
+        
+        self.healthManager.auth()
+        self.startTrackingOrShowLocationAlert(tracker: self.speedTracker)
+        disableIdleTimerIfWanted()
+    }
+    
+    @IBAction func testeCon(_ sender: Any) {
+        if WCSession.default.isReachable {
+            let message = ["message" : "hello"]
+            WCSession.default.sendMessage(message, replyHandler: { (reply) in
+                
+            print("ok")
+            }) { (error) in
+                
+            print("erro")
+            }
+            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func startTrackingOrShowLocationAlert(tracker: SpeedTracker) {
+        speedTracker.startTracking()
         
-        
+        let locationPermissions = CLLocationManager.authorizationStatus()
+        if locationPermissions == .restricted || locationPermissions == .denied {
+            let alertController = UIAlertController(title: "Location Services Required", message: "Location services must be enabled for this app, and turned on in Settings, in order to display your speed.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+           self.present(alertController, animated: true, completion: nil)
+        }
     }
-
-
+    
+    private func disableIdleTimerIfWanted() {
+        let settingsWantsScreenDimmingDisabled =  UserDefaults.standard.bool(forKey: "Speed.KeepScreenAwake")
+        UIApplication.shared.isIdleTimerDisabled = settingsWantsScreenDimmingDisabled
+    }
 }
 

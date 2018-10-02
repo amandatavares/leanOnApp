@@ -26,6 +26,14 @@
 		BE8C9623215D01CF009455AD /* ProgressCircleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8C961D215CF9DC009455AD /* ProgressCircleWrapper.swift */; };
 		BE8C9625215D1EDB009455AD /* ProgressCircleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8C9624215D1EDB009455AD /* ProgressCircleDelegate.swift */; };
 		BE8C9629215D73B4009455AD /* VelocityTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8C9628215D73B4009455AD /* VelocityTrackController.swift */; };
+		BEA0806621638EA600A41974 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0806521638EA600A41974 /* HealthManager.swift */; };
+		BEA0806721638F5300A41974 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0806521638EA600A41974 /* HealthManager.swift */; };
+		BEA080692163905400A41974 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA080682163905400A41974 /* HealthKit.framework */; };
+		BEBD046B21625AE100777121 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD046A21625AE100777121 /* HealthKit.framework */; };
+		BEBD046E21625D1900777121 /* SpeedTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD046D21625D1900777121 /* SpeedTracker.swift */; };
+		BEBD047021625D3000777121 /* SpeedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD046F21625D3000777121 /* SpeedFormat.swift */; };
+		BEBD04832162607100777121 /* SpeedTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD046D21625D1900777121 /* SpeedTracker.swift */; };
+		BEBD04842162607100777121 /* SpeedFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD046F21625D3000777121 /* SpeedFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +76,16 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEBD04822162604000777121 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +113,13 @@
 		BE8C961D215CF9DC009455AD /* ProgressCircleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleWrapper.swift; sourceTree = "<group>"; };
 		BE8C9624215D1EDB009455AD /* ProgressCircleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleDelegate.swift; sourceTree = "<group>"; };
 		BE8C9628215D73B4009455AD /* VelocityTrackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelocityTrackController.swift; sourceTree = "<group>"; };
+		BEA0806521638EA600A41974 /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		BEA080682163905400A41974 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		BEA0806A2163905400A41974 /* testandoWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "testandoWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		BEBD046821625AE100777121 /* testandoWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testandoWatch.entitlements; sourceTree = "<group>"; };
+		BEBD046A21625AE100777121 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		BEBD046D21625D1900777121 /* SpeedTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTracker.swift; sourceTree = "<group>"; };
+		BEBD046F21625D3000777121 /* SpeedFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBD046B21625AE100777121 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA080692163905400A41974 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +149,7 @@
 				BE8C95F9215BA380009455AD /* testandoWatch WatchKit Extension */,
 				BE8C95EA215BA37F009455AD /* testandoWatch WatchKit App */,
 				BE8C95D5215BA37E009455AD /* Products */,
+				BEBD046921625AE100777121 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +166,7 @@
 		BE8C95D6215BA37E009455AD /* testandoWatch */ = {
 			isa = PBXGroup;
 			children = (
+				BEBD046821625AE100777121 /* testandoWatch.entitlements */,
 				BE8C9611215BA880009455AD /* notification_manager */,
 				BE8C95D7215BA37E009455AD /* AppDelegate.swift */,
 				BE8C95D9215BA37E009455AD /* ViewController.swift */,
@@ -162,6 +191,9 @@
 		BE8C95F9215BA380009455AD /* testandoWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BEA0806A2163905400A41974 /* testandoWatch WatchKit Extension.entitlements */,
+				BEA0806421638E8D00A41974 /* Health Classes */,
+				BEBD046C21625CFE00777121 /* Location Classes */,
 				BE8C9626215D735F009455AD /* Interface Controllers */,
 				BE8C961C215CF99A009455AD /* Custom Views */,
 				BE8C95FC215BA380009455AD /* ExtensionDelegate.swift */,
@@ -201,6 +233,32 @@
 			path = "Interface Controllers";
 			sourceTree = "<group>";
 		};
+		BEA0806421638E8D00A41974 /* Health Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BEA0806521638EA600A41974 /* HealthManager.swift */,
+			);
+			path = "Health Classes";
+			sourceTree = "<group>";
+		};
+		BEBD046921625AE100777121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEA080682163905400A41974 /* HealthKit.framework */,
+				BEBD046A21625AE100777121 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEBD046C21625CFE00777121 /* Location Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BEBD046D21625D1900777121 /* SpeedTracker.swift */,
+				BEBD046F21625D3000777121 /* SpeedFormat.swift */,
+			);
+			path = "Location Classes";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,6 +270,7 @@
 				BE8C95D1215BA37E009455AD /* Frameworks */,
 				BE8C95D2215BA37E009455AD /* Resources */,
 				BE8C960D215BA381009455AD /* Embed Watch Content */,
+				BEBD04822162604000777121 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,12 +328,22 @@
 				TargetAttributes = {
 					BE8C95D3215BA37E009455AD = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					BE8C95E5215BA37F009455AD = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					BE8C95F4215BA380009455AD = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -333,10 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBD04842162607100777121 /* SpeedFormat.swift in Sources */,
 				BE8C9613215BA8A2009455AD /* NotificationManager.swift in Sources */,
 				BE8C95DA215BA37E009455AD /* ViewController.swift in Sources */,
+				BEBD04832162607100777121 /* SpeedTracker.swift in Sources */,
 				BE8C9615215BA9EE009455AD /* NotificationType.swift in Sources */,
 				BE8C95D8215BA37E009455AD /* AppDelegate.swift in Sources */,
+				BEA0806721638F5300A41974 /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,13 +416,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBD047021625D3000777121 /* SpeedFormat.swift in Sources */,
 				BE8C95FF215BA380009455AD /* NotificationController.swift in Sources */,
 				BE8C9623215D01CF009455AD /* ProgressCircleWrapper.swift in Sources */,
+				BEBD046E21625D1900777121 /* SpeedTracker.swift in Sources */,
 				BE8C95FD215BA380009455AD /* ExtensionDelegate.swift in Sources */,
 				BE8C961A215BD684009455AD /* TrackingController.swift in Sources */,
 				BE8C9629215D73B4009455AD /* VelocityTrackController.swift in Sources */,
 				BE8C95FB215BA380009455AD /* InterfaceController.swift in Sources */,
 				BE8C9625215D1EDB009455AD /* ProgressCircleDelegate.swift in Sources */,
+				BEA0806621638EA600A41974 /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,14 +590,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "testandoWatch WatchKit Extension/testandoWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				INFOPLIST_FILE = "testandoWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.elias.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -536,14 +613,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "testandoWatch WatchKit Extension/testandoWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				INFOPLIST_FILE = "testandoWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.elias.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -559,9 +638,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				IBSC_MODULE = testandoWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "testandoWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.elias.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -577,9 +657,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				IBSC_MODULE = testandoWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "testandoWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.elias.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -593,13 +674,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = testandoWatch/testandoWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				INFOPLIST_FILE = testandoWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.elias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -610,13 +693,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = testandoWatch/testandoWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				INFOPLIST_FILE = testandoWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.testandoWatch.elias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

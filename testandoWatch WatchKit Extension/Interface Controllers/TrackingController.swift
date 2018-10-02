@@ -13,6 +13,7 @@ class TrackingController: WKInterfaceController {
    
     @IBOutlet var ring: WKInterfaceImage!
     var progressWrapper: ProgressCircleWrapper?
+    var healthManager: HealthManager = HealthManager.init()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -22,8 +23,13 @@ class TrackingController: WKInterfaceController {
         
         progressWrapper?.delegate = self
         
+        healthManager.auth()
+        healthManager.getTodayDistance { (result) in
+            print("titi")
+            print(result)
+        }
         
-        
+                
     }
     
     

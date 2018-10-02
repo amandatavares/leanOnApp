@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Noz-uo-Lci">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wwS-nY-QPz">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
@@ -139,19 +139,14 @@
             <objects>
                 <controller id="wwS-nY-QPz" customClass="TrackingController" customModule="testandoWatch_WatchKit_Extension">
                     <items>
-                        <imageView width="1" height="100" alignment="left" contentMode="scaleAspectFit" id="1tn-pc-0KS"/>
-                        <button width="1" alignment="left" title="Button" id="hdt-b6-4To">
-                            <connections>
-                                <action selector="btStepAction" destination="wwS-nY-QPz" id="ATS-UJ-qde"/>
-                            </connections>
-                        </button>
+                        <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="1tn-pc-0KS"/>
                     </items>
                     <connections>
                         <outlet property="ring" destination="1tn-pc-0KS" id="n96-vq-7PF"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1423" y="326"/>
+            <point key="canvasLocation" x="1416" y="680"/>
         </scene>
         <!--Velocity Track Controller-->
         <scene sceneID="dbR-eE-yuC">
@@ -165,7 +160,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1143" y="606"/>
+            <point key="canvasLocation" x="1143" y="680"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">

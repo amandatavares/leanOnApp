@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testandoWatch/ViewController.swift"
-            timestampString = "560176116.599876"
+            timestampString = "560178759.318327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testandoWatch/ViewController.swift"
-            timestampString = "560176116.599951"
+            timestampString = "560178759.318395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "testandoWatch WatchKit Extension/Interface Controllers/VelocityTrackController.swift"
-            timestampString = "560176130.581915"
+            timestampString = "560178759.318449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "VelocityTrackController"
-            landmarkType = "21">
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "session(_:didReceiveMessage:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -14,30 +14,43 @@ class TrackingController: WKInterfaceController {
     @IBOutlet var ring: WKInterfaceImage!
     var progressWrapper: ProgressCircleWrapper?
     var healthManager: HealthManager = HealthManager.init()
+    let goal: Double = 200
+    
+    let time: Timer =  Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(progressLoop), userInfo: nil, repeats: true)
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
         progressWrapper = ProgressCircleWrapper.init(interfaceImage: ring, imageSet: "blue_progress", current: 5, max: 100, stepInterval: 0.1)
+        
         progressWrapper?.stopsOnMaxValue = false
         
         progressWrapper?.delegate = self
         
         healthManager.auth()
-        healthManager.getTodayDistance { (result) in
-            print("titi")
-            print(result)
-        }
+        
+        progressLoop()
+        
         
                 
     }
     
-    
-    @IBAction func btStepAction() {
+    @objc func progressLoop(){
         
-        progressWrapper?.increment(value: 20)
+        
+        let timer = DispatchQueue.global(qos: .background)
+        
+        timer.async {
+            self.healthManager.getTodayDistance { (result) in
+                DispatchQueue.main.async {
+                    print("titi\(result)")
+                    self.progressWrapper?.change(to: Int(result/2))
+                }
+            }
+        }
+        
+        
     }
-    
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

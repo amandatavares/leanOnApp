@@ -16,6 +16,8 @@ class TrackingController: WKInterfaceController {
     var healthManager: HealthManager = HealthManager.init()
     let goal: Double = 200
     
+    let time: Timer =  Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(progressLoop), userInfo: nil, repeats: true)
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
@@ -33,7 +35,7 @@ class TrackingController: WKInterfaceController {
                 
     }
     
-    func progressLoop(){
+    @objc func progressLoop(){
         
         
         let timer = DispatchQueue.global(qos: .background)
@@ -46,6 +48,8 @@ class TrackingController: WKInterfaceController {
                 }
             }
         }
+        
+        
     }
     
     override func willActivate() {
